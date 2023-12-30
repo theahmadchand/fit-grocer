@@ -15,7 +15,8 @@
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "paths": {
-            "@fit-grocer/ui": ["src/libs/ui/src/index.ts"]
+            "@fit-grocer/components": ["src/libs/components/src/index.ts"],
+            "@fit-grocer/utils": ["src/libs/utils/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

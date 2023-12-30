@@ -1,0 +1,11 @@
+export { CartIcon } from "./CartIcon";
+export { CartLgIcon } from "./CartLgIcon";
+export { HeartIcon } from "./HeartIcon";
+export { HomeIcon } from "./HomeIcon";
+export { LeftArrowIcon } from "./LeftArrowIcon";
+export { MinusCircleIcon } from "./MinusCircleIcon";
+export { OrderIcon } from "./OrderIcon";
+export { PlusCircleIcon } from "./PlusCircleIcon";
+export { ProfileIcon } from "./ProfileIcon";
+export { SearchIcon } from "./SearchIcon";
+export { StarIcon } from "./StarIcon";

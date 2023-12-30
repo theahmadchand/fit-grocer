@@ -11,3 +11,9 @@ body {
 ::-webkit-scrollbar {
     width: 0.5em;
 }
+
+@layer base {
+    :root {
+        --color-orange: #e74c1b;
+    }
+}

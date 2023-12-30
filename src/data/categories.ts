@@ -1,4 +1,4 @@
-import type { Category } from "@fit-grocer/ui";
+import type { Category } from "@fit-grocer/components";
 
 export const categories: Category[] = [
     { id: 1, name: "Chicken", url: "/Image-5.png" },

@@ -1,11 +1,12 @@
-import { Layout, Categories, Cards } from "@fit-grocer/ui";
-import { categories, products } from "../data";
+import { Route, Routes } from "react-router-dom";
+import { Home } from "./home";
+import { Product } from "./product";
 
 export default function App() {
     return (
-        <Layout>
-            <Categories categories={categories} />
-            <Cards products={products} />
-        </Layout>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/products/:id" element={<Product />} />
+        </Routes>
     );
 }

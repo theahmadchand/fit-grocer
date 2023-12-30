@@ -1,6 +1,7 @@
 import { Section } from "../section";
 import { Card } from "./Card";
-import type { Product } from "./types";
+import type { Product } from "../product/types";
+import { useToggleFavourite } from "./useToggleFavourite";
 
 type CardsProps = {
     products: Product[];
@@ -8,6 +9,8 @@ type CardsProps = {
 
 export const Cards = (props: CardsProps) => {
     const { products } = props;
+    const { favourites, toggleFavourite } = useToggleFavourite();
+
     return (
         <div className="mx-4 my-6 sm:mx-10 lg:mx-16 xl:mx-32 2xl:mx-60">
             <Section title="Recommended Items" actionButtonTitle="Filter" actionButtonLink="/" />
@@ -17,7 +20,11 @@ export const Cards = (props: CardsProps) => {
                     {products.map((product) => {
                         return (
                             <div key={product.id}>
-                                <Card product={product} />
+                                <Card
+                                    product={product}
+                                    isFavourite={favourites[product.id] || false}
+                                    toggleFavourite={() => toggleFavourite(product.id)}
+                                />
                             </div>
                         );
                     })}

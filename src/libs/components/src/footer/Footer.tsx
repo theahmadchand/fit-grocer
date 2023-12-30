@@ -1,4 +1,4 @@
-import { CartIcon, HeartIcon, HomeIcon, OrderIcon, ProfileIcon } from "../icons";
+import { CartIcon, HeartIcon, HomeIcon, OrderIcon, ProfileIcon } from "@fit-grocer/utils";
 
 export const Footer = () => {
     return (

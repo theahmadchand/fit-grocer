@@ -1,5 +1,4 @@
-import { HeartIcon, OrderIcon, ProfileIcon, SearchIcon } from "../icons";
-import { CartLgIcon } from "../icons/CartLgIcon";
+import { HeartIcon, CartLgIcon, OrderIcon, ProfileIcon, SearchIcon } from "@fit-grocer/utils";
 
 export const Header = () => {
     return (
@@ -15,8 +14,8 @@ export const Header = () => {
                 <div className="hidden gap-4 lg:inline-flex">
                     <SearchIcon hanging="1.75rem" width="1.75rem" strokeWidth={2.5} />
                     <CartLgIcon hanging="2rem" width="2rem" strokeWidth={2.5} />
-                    <HeartIcon hanging="1.75rem" width="1.75rem" strokeWidth={2.5} />
-                    <OrderIcon hanging="1.75rem" width="1.75rem" strokeWidth={2.5} />
+                    <HeartIcon hanging="1.75rem" width="1.75rem" strokeWidth={2.5} fill="none" stroke="black" />
+                    <OrderIcon hanging="1.75rem" width="1.75rem" strokeWidth={5} />
                     <ProfileIcon hanging="2rem" width="2rem" strokeWidth={2.5} />
                 </div>
             </div>
