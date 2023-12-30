@@ -19,12 +19,12 @@ export const Card = (props: CardProps) => {
     const navigateToProduct = () => navigate(`/products/${id}`);
 
     return (
-        <div className="w-38 group sm:w-56 lg:w-auto">
+        <div className="w-38 group cursor-pointer sm:w-56 lg:w-auto">
             <div onClick={navigateToProduct} className="aspect-w-1 xl:aspect-h-8 xl:aspect-w-7 w-full overflow-hidden">
                 <img
                     src={imageSrc}
                     alt={imageAlt}
-                    className="h-full w-full object-cover object-center group-hover:opacity-75"
+                    className="h-full w-full rounded-t-3xl object-cover object-center group-hover:opacity-75"
                 />
             </div>
 

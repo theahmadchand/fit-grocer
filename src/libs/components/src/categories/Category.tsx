@@ -11,7 +11,7 @@ export const Category = (props: CategoryProps) => {
     const { name, url } = props;
 
     return (
-        <div className="me-4 sm:me-6 lg:me-8">
+        <div className="me-4 cursor-pointer sm:me-6 lg:me-8">
             <div
                 className={`${getCategoryColor(
                     name

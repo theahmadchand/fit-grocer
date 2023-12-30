@@ -12,11 +12,18 @@ export const Header = () => {
                     <p className="font-poppins text-sm font-normal lg:text-base">It’s dinner time!</p>
                 </div>
                 <div className="hidden gap-4 lg:inline-flex">
-                    <SearchIcon hanging="1.75rem" width="1.75rem" strokeWidth={2.5} />
-                    <CartLgIcon hanging="2rem" width="2rem" strokeWidth={2.5} />
-                    <HeartIcon hanging="1.75rem" width="1.75rem" strokeWidth={2.5} fill="none" stroke="black" />
-                    <OrderIcon hanging="1.75rem" width="1.75rem" strokeWidth={5} />
-                    <ProfileIcon hanging="2rem" width="2rem" strokeWidth={2.5} />
+                    <SearchIcon className="cursor-pointer" hanging="1.75rem" width="1.75rem" strokeWidth={2.5} />
+                    <CartLgIcon className="cursor-pointer" hanging="2rem" width="2rem" strokeWidth={2.5} />
+                    <HeartIcon
+                        className="cursor-pointer"
+                        hanging="1.75rem"
+                        width="1.75rem"
+                        strokeWidth={2.5}
+                        fill="none"
+                        stroke="black"
+                    />
+                    <OrderIcon className="cursor-pointer" hanging="1.75rem" width="1.75rem" strokeWidth={5} />
+                    <ProfileIcon className="cursor-pointer" hanging="2rem" width="2rem" strokeWidth={2.5} />
                 </div>
             </div>
         </div>

@@ -80,7 +80,7 @@ export const products: Product[] = [
     },
     {
         id: 8,
-        name: "Machined Mechanical Pencil",
+        name: "Grilled Beef Steak with Mushroom sauce",
         price: 35,
         imageSrc: "/Image-7.png",
         imageAlt: "healthy food",

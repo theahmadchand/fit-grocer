@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-    theme: { 
+    theme: {
         extend: {
             spacing: {},
             colors: {
@@ -11,11 +11,14 @@ module.exports = {
                 mint: "#EAF9E6",
                 pink: "#FFE8EE",
                 peach: "#FFEEE8",
-                'bright-yellow':'#FFB300'
+                "bright-yellow": "#FFB300",
             },
             fontFamily: {
                 poppins: ["Poppins"],
                 inter: ["Inter"],
+            },
+            screens: {
+                "3xl": "1610px",
             },
         },
     },
