@@ -1,6 +1,8 @@
 import type { Product } from "./types";
 import { LeftArrowIcon, HeartIcon, StarIcon, PlusCircleIcon, MinusCircleIcon } from "@fit-grocer/utils";
 import { useQuantityCounter } from "./useQuantityCounter";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 type ProductItemProps = {
     product: Product;
@@ -12,14 +14,23 @@ export const ProductItem = (props: ProductItemProps) => {
     } = props;
 
     const { quantity, increaseQuantity, decreaseQuantity } = useQuantityCounter();
+    const [isFavourite, setIsfavourite] = useState(false);
+    const navigate = useNavigate();
 
     return (
         <div>
             <div className="min-h-[48rem] flex-grow rounded-b-[3rem] bg-white">
                 <div className="px-6 pt-12 sm:px-10 lg:px-16 lg:pt-14 xl:px-32 xl:pt-24 2xl:px-60">
                     <div className="flex items-center justify-between">
-                        <LeftArrowIcon width="2.5rem" height="2.5rem" />
-                        <HeartIcon width="2rem" height="2rem" strokeWidth="1.5" fill="none" stroke="black" />
+                        <LeftArrowIcon onClick={() => navigate("..")} width="2.5rem" height="2.5rem" />
+                        <HeartIcon
+                            onClick={() => setIsfavourite((previous) => !previous)}
+                            width="2rem"
+                            height="2rem"
+                            strokeWidth="1.5"
+                            fill={isFavourite ? "var(--color-orange)" : "none"}
+                            stroke={isFavourite ? "var(--color-orange)" : "black"}
+                        />
                     </div>
                     <div className="pt-8 font-poppins text-base font-semibold">{name}</div>
                     <div className="py-2 font-poppins text-sm font-normal text-gray">{category}</div>
