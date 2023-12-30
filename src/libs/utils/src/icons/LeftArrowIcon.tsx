@@ -6,10 +6,10 @@ export const LeftArrowIcon = (props: SVGProps<SVGSVGElement>) => {
             <path
                 d="M15.95 9.8833L5.83337 20L15.95 30.1166M34.1667 20H6.11671"
                 stroke="black"
-                stroke-width="1.5"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeMiterlimit="10"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             />
         </svg>
     );
