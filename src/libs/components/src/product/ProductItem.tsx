@@ -11,15 +11,14 @@ type ProductItemProps = {
 };
 
 export const ProductItem = (props: ProductItemProps) => {
-    const {
-        product: { name, category, rating, description, imageSrc, imageAlt, price },
-    } = props;
+    const { product } = props;
+    const { name, category, rating, description, imageSrc, imageAlt } = product;
 
     return (
         <div>
             <div className="relative min-h-[calc(100vh-8rem)] flex-grow rounded-b-[3rem] bg-white 2xl:min-h-[calc(100vh-10rem)] 3xl:min-h-[calc(100vh-14rem)]">
                 <div className="px-6 pt-10 sm:px-10 lg:px-16 xl:px-32 2xl:px-60 2xl:pt-16 3xl:pt-24">
-                    <NavigationAndFavoriteBar />
+                    <NavigationAndFavoriteBar product={product} />
 
                     <div className="flex">
                         <div className="w-full">
@@ -38,7 +37,7 @@ export const ProductItem = (props: ProductItemProps) => {
                 </div>
             </div>
 
-            <PriceAndCartButton price={price} />
+            <PriceAndCartButton product={product} />
         </div>
     );
 };

@@ -1,6 +1,8 @@
-import { HeartIcon, CartLgIcon, OrderIcon, ProfileIcon, SearchIcon } from "@fit-grocer/utils";
+import { HeartIcon, CartLgIcon, OrderIcon, ProfileIcon, SearchIcon, useNavigatePage } from "@fit-grocer/utils";
 
 export const Header = () => {
+    const { navigateToCart, navigateToWishlist } = useNavigatePage();
+
     return (
         <div className="mx-4 mt-16 sm:mx-10 lg:mx-16 lg:mt-14 xl:mx-32 xl:mt-24 2xl:mx-60">
             <div className="flex items-start justify-between">
@@ -13,8 +15,15 @@ export const Header = () => {
                 </div>
                 <div className="hidden gap-4 lg:inline-flex">
                     <SearchIcon className="cursor-pointer" hanging="1.75rem" width="1.75rem" strokeWidth={2.5} />
-                    <CartLgIcon className="cursor-pointer" hanging="2rem" width="2rem" strokeWidth={2.5} />
+                    <CartLgIcon
+                        onClick={navigateToCart}
+                        className="cursor-pointer"
+                        hanging="2rem"
+                        width="2rem"
+                        strokeWidth={2.5}
+                    />
                     <HeartIcon
+                        onClick={navigateToWishlist}
                         className="cursor-pointer"
                         hanging="1.75rem"
                         width="1.75rem"

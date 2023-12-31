@@ -1,22 +1,20 @@
 import { useNavigate } from "react-router-dom";
-import { HeartIcon } from "@fit-grocer/utils";
+import { HeartIcon, useWishlistContext } from "@fit-grocer/utils";
 import type { Product } from "../product";
 
 type CardProps = {
     product: Product;
-    isFavourite: boolean;
-    toggleFavourite: () => void;
 };
 
 export const Card = (props: CardProps) => {
-    const {
-        product: { id, name, price, imageSrc, imageAlt },
-        isFavourite,
-        toggleFavourite,
-    } = props;
-    const navigate = useNavigate();
+    const { product } = props;
+    const { id, name, price, imageSrc, imageAlt } = product;
 
+    const navigate = useNavigate();
     const navigateToProduct = () => navigate(`/products/${id}`);
+    const { isProductInWishlist, toggleWishlist } = useWishlistContext();
+
+    const toggleFavourite = () => toggleWishlist(product);
 
     return (
         <div className="w-38 group cursor-pointer sm:w-56 lg:w-auto">
@@ -43,8 +41,8 @@ export const Card = (props: CardProps) => {
                         height="1.25rem"
                         width="1.25rem"
                         strokeWidth={2}
-                        fill={isFavourite ? "var(--color-orange)" : "none"}
-                        stroke={isFavourite ? "var(--color-orange)" : "black"}
+                        fill={isProductInWishlist(id) ? "var(--color-orange)" : "none"}
+                        stroke={isProductInWishlist(id) ? "var(--color-orange)" : "black"}
                     />
                 </span>
             </div>
