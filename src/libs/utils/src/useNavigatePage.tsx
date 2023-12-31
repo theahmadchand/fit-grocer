@@ -3,10 +3,6 @@ import { useNavigate } from "react-router-dom";
 export const useNavigatePage = () => {
     const navigate = useNavigate();
 
-    function navigateToPreviousPage() {
-        navigate(-1);
-    }
-
     function navigateToCart() {
         navigate("/cart");
     }
@@ -19,5 +15,19 @@ export const useNavigatePage = () => {
         navigate("/checkout");
     }
 
-    return { navigateToPreviousPage, navigateToCart, navigateToWishlist, navigateToCheckout };
+    function navigateToOrderPlaced() {
+        navigate("/order-placed");
+    }
+
+    function navigateToHome() {
+        navigate("/");
+    }
+
+    return {
+        navigateToCart,
+        navigateToWishlist,
+        navigateToCheckout,
+        navigateToOrderPlaced,
+        navigateToHome,
+    };
 };

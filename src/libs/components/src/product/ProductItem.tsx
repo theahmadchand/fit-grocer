@@ -5,6 +5,7 @@ import { QuantitySelector } from "./QuantitySelector";
 import { ProductDetail } from "./ProductDetail";
 import { ProductImage } from "./ProductImage";
 import { ProductDescription } from "./ProductDescription";
+import { useNavigatePage } from "@fit-grocer/utils";
 
 type ProductItemProps = {
     product: Product;
@@ -13,12 +14,13 @@ type ProductItemProps = {
 export const ProductItem = (props: ProductItemProps) => {
     const { product } = props;
     const { name, category, rating, description, imageSrc, imageAlt } = product;
+    const { navigateToHome, navigateToCart } = useNavigatePage();
 
     return (
         <div>
             <div className="relative min-h-[calc(100vh-8rem)] flex-grow rounded-b-[3rem] bg-white 2xl:min-h-[calc(100vh-10rem)] 3xl:min-h-[calc(100vh-14rem)]">
-                <div className="px-6 pt-10 sm:px-10 lg:px-16 xl:px-32 2xl:px-60 2xl:pt-16 3xl:pt-24">
-                    <NavigationAndFavoriteBar product={product} />
+                <div className="px-6 sm:px-10 lg:px-16 xl:px-32 2xl:px-60">
+                    <NavigationAndFavoriteBar product={product} navigateButtonCallback={navigateToHome} />
 
                     <div className="flex">
                         <div className="w-full">
@@ -37,7 +39,7 @@ export const ProductItem = (props: ProductItemProps) => {
                 </div>
             </div>
 
-            <PriceAndCartButton product={product} />
+            <PriceAndCartButton product={product} actionButtonCallback={navigateToCart} />
         </div>
     );
 };

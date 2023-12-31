@@ -2,7 +2,7 @@ import { PageLayout, PaymentOption } from "@fit-grocer/components";
 import { useNavigatePage } from "@fit-grocer/utils";
 
 export const Checkout = () => {
-    const { navigateToCheckout } = useNavigatePage();
+    const { navigateToCart, navigateToOrderPlaced } = useNavigatePage();
 
     return (
         <PageLayout
@@ -10,12 +10,13 @@ export const Checkout = () => {
             priceTitle="Total"
             price={4251}
             actionButtonTitle="Pay Now"
-            actionButtonCallback={navigateToCheckout}
+            navigateButtonCallback={navigateToCart}
+            actionButtonCallback={navigateToOrderPlaced}
         >
-            <div className="mt-10">
+            <div>
                 <div>
                     <p className="font-poppins text-2xl font-semibold">Payment</p>
-                    <div className="my-10 flex flex-col items-center">
+                    <div className="my-6 flex flex-col items-center">
                         <div className="w-full rounded-3xl bg-white drop-shadow-sm">
                             <PaymentOption
                                 name="Debit/Credit Card"
@@ -32,7 +33,7 @@ export const Checkout = () => {
 
                 <div>
                     <p className="font-poppins text-2xl font-semibold">Delivery details</p>
-                    <div className="my-10 text-gray">
+                    <div className="my-6 text-gray">
                         <p>789 Maple Street, Los Angeles,</p>
                         <p>CA 90001</p>
                         <p>(888) 987-6543</p>
@@ -41,7 +42,7 @@ export const Checkout = () => {
 
                 <div>
                     <p className="font-poppins text-2xl font-semibold">Order details</p>
-                    <div className="my-10 flex text-gray">
+                    <div className="mt-6 flex text-gray">
                         <div className="w-1/2">
                             <p>1x Green salad</p>
                             <p>1x fresh vegetable</p>

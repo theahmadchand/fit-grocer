@@ -3,13 +3,17 @@ import { Product } from "./types";
 
 type PriceAndCartButtonProps = {
     product: Product;
+    actionButtonCallback: () => void;
 };
 
 export const PriceAndCartButton = (props: PriceAndCartButtonProps) => {
-    const { product } = props;
+    const { product, actionButtonCallback } = props;
     const { addToCart } = useCartContext();
 
-    const handleAddToCart = () => addToCart(product);
+    const handleAddToCart = () => {
+        addToCart(product);
+        actionButtonCallback();
+    };
 
     return (
         <div className="relative flex h-0 items-center justify-between lg:h-0 xl:h-0">

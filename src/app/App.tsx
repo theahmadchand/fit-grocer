@@ -5,6 +5,7 @@ import { ScrollToTop } from "@fit-grocer/utils";
 import { Cart } from "./cart";
 import { Wishlist } from "./wishlist";
 import { Checkout } from "./checkout";
+import { OrderPlaced } from "./order";
 
 export default function App() {
     return (
@@ -14,6 +15,7 @@ export default function App() {
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/checkout" element={<Checkout />} />
                 <Route path="/wishlist" element={<Wishlist />} />
+                <Route path="/order-placed" element={<OrderPlaced />} />
                 <Route path="/products/:productId" element={<Product />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
