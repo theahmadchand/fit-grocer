@@ -10,7 +10,7 @@ export const Cart = () => {
             pageTitle="My Bucket"
             priceTitle="Total"
             price={4251}
-            actionButtonTitle="Add to Card"
+            actionButtonTitle="Checkout"
             actionButtonCallback={navigateToCheckout}
         >
             <div className="mt-10">
