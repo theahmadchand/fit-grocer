@@ -8,7 +8,7 @@ export const Footer = () => {
                     <HomeIcon height="2rem" width="2rem" />
                 </span>
                 <span className="text-gray">
-                    <HeartIcon height="2rem" width="2rem" />
+                    <HeartIcon height="2rem" width="2rem" fill="none" stroke="black" />
                 </span>
                 <span>
                     <CartIcon height="3rem" width="3rem" />

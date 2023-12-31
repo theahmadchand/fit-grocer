@@ -29,7 +29,7 @@ export const Card = (props: CardProps) => {
             </div>
 
             <div className="flex h-20 w-full flex-col justify-evenly rounded-b-3xl bg-white px-4 py-2">
-                <h3 onClick={navigateToProduct} className="font-poppins text-sm font-medium lg:text-base">
+                <h3 onClick={navigateToProduct} className="truncate font-poppins text-sm font-medium lg:text-base">
                     {name}
                 </h3>
                 <span className="flex justify-between">
