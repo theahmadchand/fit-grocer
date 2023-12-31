@@ -10,6 +10,7 @@ export const PriceAndCartButton = (props: PriceAndCartButtonProps) => {
     const { addToCart } = useCartContext();
 
     const handleAddToCart = () => addToCart(product);
+
     return (
         <div className="relative flex h-0 items-center justify-between lg:h-0 xl:h-0">
             <div className="absolute left-6 top-6 font-inter text-lg md:left-10 md:top-10 lg:left-16 lg:top-6 xl:left-32 xl:top-4 2xl:left-60 2xl:top-10 3xl:top-16 3xl:text-xl">

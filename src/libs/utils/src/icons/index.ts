@@ -1,5 +1,6 @@
 export { CartIcon } from "./CartIcon";
 export { CartLgIcon } from "./CartLgIcon";
+export { DeleteIcon } from "./DeleteIcon";
 export { HeartIcon } from "./HeartIcon";
 export { HomeIcon } from "./HomeIcon";
 export { LeftArrowIcon } from "./LeftArrowIcon";

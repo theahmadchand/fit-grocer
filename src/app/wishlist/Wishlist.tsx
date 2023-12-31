@@ -3,7 +3,7 @@ import { LeftArrowIcon, useNavigatePage, useWishlistContext } from "@fit-grocer/
 
 export const Wishlist = () => {
     const { navigateToPreviousPage } = useNavigatePage();
-    const { wishlist } = useWishlistContext();
+    const { wishlist, toggleWishlist, isProductInWishlist } = useWishlistContext();
 
     return (
         <div className="px-6 pt-10 sm:px-10 lg:px-16 xl:px-32 2xl:px-60 2xl:pt-16 3xl:pt-24">
@@ -20,11 +20,9 @@ export const Wishlist = () => {
                 {wishlist.map((wishItem) => (
                     <div key={wishItem.id}>
                         <WishItem
-                            src={wishItem.imageSrc}
-                            alt={wishItem.imageAlt}
-                            name={wishItem.name}
-                            quantity={wishItem.id}
-                            price={wishItem.price}
+                            product={wishItem}
+                            isProductInWishlist={isProductInWishlist}
+                            toggleWishlist={toggleWishlist}
                         />
                     </div>
                 ))}
