@@ -1,22 +1,24 @@
 # FitGrocer
 
-Deployed Link: fit-grocer.vercel.app
+Deployed Link: [fit-grocer.vercel.app](http://fit-grocer.vercel.app "fit-grocer.vercel.app")
 
 ## Built With
 
 React
+
 Tailwind CSS
+
 Typescript
+
 Vite
+
 NX
+
 Vercel
-
-
 
 ## Start the app
 
-To start the development server run `npm start` or `yarn start` or `pnpm start` or just simply `nx serve`. Open your browser and navigate to http://localhost:4200/. 
-
+To start the development server run `npm start` or `yarn start` or `pnpm start` or just simply `nx serve`. Open your browser and navigate to http://localhost:4200/.
 
 ## Running tasks
 
