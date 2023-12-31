@@ -4,7 +4,7 @@ export const useNavigatePage = () => {
     const navigate = useNavigate();
 
     function navigateToPreviousPage() {
-        navigate("..");
+        navigate(-1);
     }
 
     function navigateToCart() {
@@ -15,5 +15,9 @@ export const useNavigatePage = () => {
         navigate("/wishlist");
     }
 
-    return { navigateToPreviousPage, navigateToCart, navigateToWishlist };
+    function navigateToCheckout() {
+        navigate("/checkout");
+    }
+
+    return { navigateToPreviousPage, navigateToCart, navigateToWishlist, navigateToCheckout };
 };
